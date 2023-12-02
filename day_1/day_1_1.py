@@ -8,11 +8,6 @@ import re
 def _main():
     for line in fileinput.input():
         if fileinput.isfirstline():
-            try:
-                print(_sum)
-            except UnboundLocalError:
-                pass
-
             _sum = 0
 
         _sum += int(''.join((line[re.search(r"\d", line).start()],
